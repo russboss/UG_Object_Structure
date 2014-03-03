@@ -7,16 +7,16 @@ namespace UG_Object_Structure
 {
     abstract class AbstractObject
     {
-        private PostitionData position;
-        private RotationData rotation;
+        private PostitionData position = null;
+        private RotationData rotation = null;
         
-        private int mass;
+        private int mass = 0;
 
-        //should be called when a piece is added or removed
         public void calculateMass()
         {
             //get mass from all objects attached
-            mass = 10;
+            //mass += mount.getParrent().getMass()
+
         }
 
         public int getMass()
@@ -24,6 +24,10 @@ namespace UG_Object_Structure
             return mass;
         }
 
+        public void incrementMass(int additionalMass)
+        {
+            mass += additionalMass;
+        }
 
         public PostitionData getPosition()
         {
