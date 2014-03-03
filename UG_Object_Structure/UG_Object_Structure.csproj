@@ -49,6 +49,7 @@
     <Compile Include="AbstractMount.cs" />
     <Compile Include="AbstractObject.cs" />
     <Compile Include="dockMount.cs" />
+    <Compile Include="Drone.cs" />
     <Compile Include="MobileObject.cs" />
     <Compile Include="RotationData.cs" />
     <Compile Include="PostitionData.cs" />

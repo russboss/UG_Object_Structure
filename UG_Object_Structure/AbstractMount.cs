@@ -7,8 +7,15 @@ namespace UG_Object_Structure
 {
     abstract class AbstractMount
     {
+        MobileObject parent;
+        //position data ??specific for local location ??
+        //rotation data ??specific for mount or standard ??
         //link and unlink methods
-        //rotation data
-
+        
+        //method for return linked
+        public MobileObject getParent()
+        {
+            return parent;
+        }
     }
 }
