@@ -24,18 +24,6 @@ namespace UG_Object_Structure
 
         public void calculateMass()
         {
-            //AbstractMount mount = null;
-            List<AbstractMount>.Enumerator mount;
-            mount = weaponMount.GetEnumerator();
-            addMasses(mount);
-            mount = sensorMount.GetEnumerator();
-            addMasses(mount);
-            mount = shieldMount.GetEnumerator();
-            addMasses(mount);
-            mount = externalMount.GetEnumerator();
-            addMasses(mount);
-            mount = equipment.GetEnumerator();
-            addMasses(mount);
 
         }
 
