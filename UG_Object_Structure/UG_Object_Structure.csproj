@@ -51,6 +51,7 @@
     <Compile Include="dockMount.cs" />
     <Compile Include="Drone.cs" />
     <Compile Include="MobileObject.cs" />
+    <Compile Include="OrbitalObject.cs" />
     <Compile Include="RotationData.cs" />
     <Compile Include="PostitionData.cs" />
     <Compile Include="shipForm.cs">
