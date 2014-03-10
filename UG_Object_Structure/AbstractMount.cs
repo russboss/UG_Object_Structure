@@ -7,19 +7,23 @@ namespace UG_Object_Structure
 {
     abstract class AbstractMount
     {
-        MobileObject parent;
-        AbstractMount link= null;
+        MobileObject parent = null;
+        AbstractMount link = null;
         //position data ??specific for local location ??
         //rotation data ??specific for mount or standard ??
-        //link and unlink methods
         
         //method for return linked
         public MobileObject getParent()
         {
             return parent;
         }
+        public void setParent(MobileObject newParent)
+        {
+            this.parent = newParent;
+        }
 
         public void attach(AbstractMount linkNew){
+            //procedure to link this mount to the paired mount
             link = linkNew;
             link.setLink(this);
 
@@ -31,7 +35,6 @@ namespace UG_Object_Structure
             //set linked AbstractMount.link to null
             link.setLink(null);
             link = null;
-
 
             this.detachSequence();
         }
@@ -46,5 +49,43 @@ namespace UG_Object_Structure
             link = linkNew;
         }
 
+        public AbstractMount getLink()
+        {
+            return link;
+        }
+
+        public void updateMass(Boolean attach)
+        {
+            int deltaMass = ( this.getLink().getParent() ).getMass();
+            if (attach == true)
+            {
+                this.getParent().incrementMass(deltaMass);
+            }
+            else
+            {
+                this.getParent().decrementMass(deltaMass);
+            }
+        }
+
+        public void updatePower(Boolean attach)
+        {
+            if (attach == true)
+            {
+            }
+            else
+            {
+            }
+        }
+        public void updateSpeed(Boolean attach)
+        {
+            if (attach == true)
+            {
+            }
+            else
+            {
+            }
+        }
+
+    
     }
 }

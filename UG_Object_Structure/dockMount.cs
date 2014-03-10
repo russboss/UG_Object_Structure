@@ -7,44 +7,17 @@ namespace UG_Object_Structure
 {
     class dockMount : AbstractMount
     {
-        dockMount link;
-
-        public dockMount getLink()
-        {
-            return link;
-        }
-
-
-
 
         override public void attachSequence()
         {
+            updateMass(true);
         }
 
         override public void detachSequence()
         {
+            updateMass(false);
         }
 
-
-        /*
-        public void attach(dockMount linkNew)
-        {
-            link = linkNew;
-            link.setLink(this);
-            MobileObject a = this.getLink().getParent();
-            int b = a.getMass();
-            this.getParent().incrementMass(b);
-        }
-
-        public void detach()
-        {
-            link = null;
-
-            MobileObject a = this.getLink().getParent();
-            int b = a.getMass();
-            this.getParent().decrementMass(b);
-        }
-        */
 
     }
 }
