@@ -22,10 +22,6 @@ namespace UG_Object_Structure
 
         //should be called when a piece is added or removed
 
-        public void calculateMass()
-        {
-
-        }
 
         private void addMasses(IEnumerator<AbstractMount> mount)
         {
@@ -35,5 +31,7 @@ namespace UG_Object_Structure
             }
         }
 
+
+        
     }
 }

@@ -24,9 +24,14 @@ namespace UG_Object_Structure
             return mass;
         }
 
-        public void incrementMass(int additionalMass)
+        public void incrementMass(int deltaMass)
         {
-            mass += additionalMass;
+            mass += deltaMass;
+        }
+
+        public void decrementMass(int deltaMass)
+        {
+            mass -= deltaMass;
         }
 
         public PostitionData getPosition()
