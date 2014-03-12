@@ -11,11 +11,11 @@ namespace UG_Object_Structure
         int speed = 0;
         int turnSpeed = 0;
         List<dockMount> dockMount = null;
-        List<int> weaponMount = null;
-        List<int> sensorMount = null;
-        List<int> shieldMount = null;
-        List<int> externalMount = null;
-        List<int> equipment = null;
+        List<AbstractMount> weaponMount = null;
+        List<AbstractMount> sensorMount = null;
+        List<AbstractMount> shieldMount = null;
+        List<AbstractMount> externalMount = null;
+        List<AbstractMount> equipment = null;
 
         //methods for retreiving mounts
         //methods for adding/removing a reference from a mount
@@ -23,15 +23,44 @@ namespace UG_Object_Structure
         //should be called when a piece is added or removed
 
 
-        private void addMasses(IEnumerator<AbstractMount> mount)
+        private int updateMass(AbstractMount lastMount)
         {
+            IEnumerator<AbstractMount> mount = dockMount.GetEnumerator();
+            int mass = getMass();
+
             while (mount.MoveNext())
             {
-                incrementMass(mount.Current.getParent().getMass());
+                if (lastMount != mount.Current && mount.Current.getLink() != null)
+                {
+                    mass += mount.Current.getParent().updateMass(mount.Current);
+                }
             }
+            return mass;
         }
 
-
-        
+        public void addDockMount(dockMount newMount)
+        {
+            dockMount.Add(newMount);
+        }
+        public void addWeaponMount(AbstractMount newMount)
+        {
+            weaponMount.Add(newMount);
+        }
+        public void addSensorMount(AbstractMount newMount)
+        {
+            sensorMount.Add(newMount);
+        }
+        public void addShieldMount(AbstractMount newMount)
+        {
+            shieldMount.Add(newMount);
+        }
+        public void addExternalMount(AbstractMount newMount)
+        {
+            externalMount.Add(newMount);
+        }
+        public void addEquipment(AbstractMount newMount)
+        {
+            equipment.Add(newMount);
+        }
     }
 }

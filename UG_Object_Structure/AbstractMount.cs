@@ -54,38 +54,7 @@ namespace UG_Object_Structure
             return link;
         }
 
-        public void updateMass(Boolean attach)
-        {
-            int deltaMass = ( this.getLink().getParent() ).getMass();
-            if (attach == true)
-            {
-                this.getParent().incrementMass(deltaMass);
-            }
-            else
-            {
-                this.getParent().decrementMass(deltaMass);
-            }
-        }
-
-        public void updatePower(Boolean attach)
-        {
-            if (attach == true)
-            {
-            }
-            else
-            {
-            }
-        }
-        public void updateSpeed(Boolean attach)
-        {
-            if (attach == true)
-            {
-            }
-            else
-            {
-            }
-        }
-
+        
     
     }
 }

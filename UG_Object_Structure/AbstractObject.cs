@@ -11,6 +11,8 @@ namespace UG_Object_Structure
         private RotationData rotation = null;
         
         private int mass = 0;
+        private int power = 0;
+        private int maxSpeed = 0;
 
         public void calculateMass()
         {
@@ -24,14 +26,24 @@ namespace UG_Object_Structure
             return mass;
         }
 
-        public void incrementMass(int deltaMass)
+        public int getPower()
         {
-            mass += deltaMass;
+            return power;
         }
 
-        public void decrementMass(int deltaMass)
+        public int getSpeed()
         {
-            mass -= deltaMass;
+            return maxSpeed;
+        }
+
+        public void massDelta(int delta)
+        {
+            mass += delta;
+        }
+
+        public void powerDelta(int delta)
+        {
+            power += delta;
         }
 
         public PostitionData getPosition()
@@ -43,7 +55,6 @@ namespace UG_Object_Structure
         {
             return rotation;
         }
-
 
 
 

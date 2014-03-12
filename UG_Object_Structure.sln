@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual C# Express 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UG_Object_Structure", "UG_Object_Structure\UG_Object_Structure.csproj", "{BE450671-9887-4557-B832-5DC1D55E13C7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing_Interface", "Testing_Interface\Testing_Interface.csproj", "{B6A03481-2C5C-4DAD-822E-8F9AE0C1FF58}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -13,6 +15,10 @@ Global
 		{BE450671-9887-4557-B832-5DC1D55E13C7}.Debug|x86.Build.0 = Debug|x86
 		{BE450671-9887-4557-B832-5DC1D55E13C7}.Release|x86.ActiveCfg = Release|x86
 		{BE450671-9887-4557-B832-5DC1D55E13C7}.Release|x86.Build.0 = Release|x86
+		{B6A03481-2C5C-4DAD-822E-8F9AE0C1FF58}.Debug|x86.ActiveCfg = Debug|x86
+		{B6A03481-2C5C-4DAD-822E-8F9AE0C1FF58}.Debug|x86.Build.0 = Debug|x86
+		{B6A03481-2C5C-4DAD-822E-8F9AE0C1FF58}.Release|x86.ActiveCfg = Release|x86
+		{B6A03481-2C5C-4DAD-822E-8F9AE0C1FF58}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

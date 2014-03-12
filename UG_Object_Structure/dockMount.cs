@@ -10,12 +10,12 @@ namespace UG_Object_Structure
 
         override public void attachSequence()
         {
-            updateMass(true);
+            //updateMass(true);
         }
 
         override public void detachSequence()
         {
-            updateMass(false);
+            //updateMass(false);
         }
 
 
