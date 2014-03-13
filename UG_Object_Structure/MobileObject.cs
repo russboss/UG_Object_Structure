@@ -7,6 +7,7 @@ namespace UG_Object_Structure
 {
     abstract class MobileObject : AbstractObject
     {
+        int baseCargoSpace = 0;
         int cargoSpace = 0;
         int speed = 0;
         int turnSpeed = 0;
@@ -22,6 +23,10 @@ namespace UG_Object_Structure
 
         //should be called when a piece is added or removed
 
+        override public void calculateMass()
+        {
+            setMass( updateMass(null));
+        }
 
         private int updateMass(AbstractMount lastMount)
         {

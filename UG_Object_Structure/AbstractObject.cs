@@ -14,11 +14,11 @@ namespace UG_Object_Structure
         private int power = 0;
         private int maxSpeed = 0;
 
-        public void calculateMass()
-        {
-            //get mass from all objects attached
-            //mass += mount.getParrent().getMass()
+        abstract public void calculateMass();
 
+        public void setMass(int newMass)
+        {
+            mass = newMass;
         }
 
         public int getMass()
