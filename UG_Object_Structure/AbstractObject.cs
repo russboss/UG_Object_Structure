@@ -9,7 +9,7 @@ namespace UG_Object_Structure
     {
         private PostitionData position = null;
         private RotationData rotation = null;
-        
+        private String name = "";
         private int mass = 0;
 
         public void calculateMass()
