@@ -7,9 +7,10 @@ namespace UG_Object_Structure
 {
     abstract class AbstractObject
     {
+        private String name = ""; //name of the object
+
         private PostitionData position = null;
         private RotationData rotation = null;
-        private String name = "";
         private int mass = 0;
 
         public void calculateMass()
@@ -38,8 +39,29 @@ namespace UG_Object_Structure
         {
             return rotation;
         }
+        public String getName()
+        {
+            return name;
+        }
+        public bool Equals(AbstractObject obj)
+        {
+            if (obj != null)
+            {
+                if(this.getName() == obj.getName() )
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
 
-
+            }
+            else
+            {
+                return false;
+            }
+        }
 
 
     }

@@ -15,7 +15,6 @@ namespace UG_Object_Structure
         
         //List<ResourceType> resource;
 
-
         void addchild(OrbitalObject newChild)
         {
             child.Add(newChild);
@@ -26,7 +25,8 @@ namespace UG_Object_Structure
         }
         OrbitalObject getChildByName(String searchName)
         {
-            //return child.;
+
+            return child.Find(ret => ret.getName()==searchName );
         }
 
         void setParent(OrbitalObject newParent)
@@ -53,7 +53,6 @@ namespace UG_Object_Structure
             return spinSpeed;
         }
         
-
 
     }
 }
